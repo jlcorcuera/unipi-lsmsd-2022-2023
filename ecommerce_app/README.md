@@ -44,6 +44,8 @@ For this session it is required to have installed:
 - Apache Maven 3.x version. (*)
 - Apache Tomcat 9.x.
 - An IDE (IntelliJ, Eclipse, Netbeans)
+- MySQL Community Server 8.x
+- Redis >= 4.0.9 
 
 Also, do not forget to define the following environment variables:
 
