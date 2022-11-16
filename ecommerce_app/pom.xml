@@ -57,6 +57,6 @@
   </dependencies>
 
   <build>
-    <finalName>${artifactId}</finalName>
+    <finalName>ecommerce</finalName>
   </build>
 </project>

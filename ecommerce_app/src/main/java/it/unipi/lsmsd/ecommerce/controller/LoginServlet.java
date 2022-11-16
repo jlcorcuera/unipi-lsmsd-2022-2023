@@ -32,6 +32,7 @@ public class LoginServlet extends HttpServlet {
         String targetJSP = "/WEB-INF/jsp/login.jsp";
         if (authenticatedUserDTO != null){
             if ("logout".equals(action)){
+                httpServletRequest.getSession().removeAttribute(Constants.AUTHENTICATED_USER_KEY);
                 httpServletRequest.getSession().invalidate();
             }
             targetJSP = "/shop";
@@ -48,7 +49,11 @@ public class LoginServlet extends HttpServlet {
                 String username = httpServletRequest.getParameter("username");
                 String password = httpServletRequest.getParameter("password");
                 try {
-                    authenticatedUserDTO = userService.authenticate(username, password);
+                    if (username != null && password != null && !username.isEmpty() && !password.isEmpty()){
+                        authenticatedUserDTO = userService.authenticate(username, password);
+                    } else {
+                        httpServletRequest.setAttribute("errorMessage", "Invalid username or password.");
+                    }
                 } catch (BusinessException e) {
                     logger.error("Error during login operation.",e);
                     httpServletRequest.setAttribute("errorMessage", "Invalid username or password.");
