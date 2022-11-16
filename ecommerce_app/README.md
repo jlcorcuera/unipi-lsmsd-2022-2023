@@ -1,5 +1,5 @@
 
-# Ecommerce App
+# Ecommerce Web Application
 
 ## Required software
 
@@ -30,4 +30,4 @@ In a future version these parameters are going to be moved to an external config
 
 ## Running the application by using IntelliJ
 
-Open the maven project in IntelliJ. After that, follow [this steps](https://www.jetbrains.com/idea/guide/tutorials/working-with-apache-tomcat/using-existing-application/) to run the application.
+Open the maven project in IntelliJ. After that, follow [these steps](https://www.jetbrains.com/idea/guide/tutorials/working-with-apache-tomcat/using-existing-application/) to run the application.
