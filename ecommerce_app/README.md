@@ -19,6 +19,14 @@ Also, do not forget to define the following environment variables:
 (*) You can avoid doing all these step manually by installing
 [SDKMAN](https://sdkman.io/).
 
+## Restoring a MySQL dump file
+
+Run the following command in a terminal by using (do not forget to update/provide your MySQL credentials):
+
+```sh
+mysql -u <user> -p < unipi.sql
+```
+
 ## Updating configuration parameters
 
 In this version of this App, the configuration parameters are set in the following files:
